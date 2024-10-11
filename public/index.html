@@ -1,13 +1,48 @@
-<html>
+<!-- TODO: visualise the damn layout -->
 
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Recommendations</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
+<table id="header">
+  <tr>
+    <td id="current-log">Current log</td>
+    <td id="login-info">Logged in as <br><a href="/login.html" id="login">a nobody (login)</a></td>
+    <td id="logout">
+      <button>Logout</button>
+    </td>
+  </tr>
+</table>
+<div id="log">
+  <div id="scrollable">
+    <p id="scrollable-content"></p>
+  </div>
+</div>
+<!-- <div id="login-info">
+  <p>Logged in as <br><a href="/login.html" id="login">a nobody (login)</a></p><br><br>
+</div> -->
 
+<div id="ui">
+  <table>
+    <tr>
+      <td>Enter track amount -></td>
+      <td><input type="text" placeholder="15" id="amount" min="1" max="50"></td>
+    </tr>
+  </table>
+  <br>
+  <button id="generate" class="not-logout">Generate Recommendations</button>
+  <br><br>
+  <button id="generate_shuffled" class="not-logout">Generate "shuffled"</button>
+  <br><br>
+  <button id="save" class="not-logout">Save track amount</button>
+  <br><br>
+  <button id="reset" class="not-logout">Reset track amount</button>
+</div>
+<script type="module" src="/javascripts/main.js"></script>
+</body>
 </html>
